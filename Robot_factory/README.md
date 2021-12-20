@@ -1,5 +1,32 @@
 # Robot Factory
 
+
+<!-- vim-markdown-toc GFM -->
+
+	* [First contact with the challenge](#first-contact-with-the-challenge)
+	* [Dealing with the libc version](#dealing-with-the-libc-version)
+	* [Let's start working](#lets-start-working)
+	* [Reverse engineering](#reverse-engineering)
+		* [Main function](#main-function)
+	* [Robot structure and enumerations](#robot-structure-and-enumerations)
+	* [create_robot](#create_robot)
+		* [Initialisation](#initialisation)
+		* [ROBOT_TYPE_STRING](#robot_type_string)
+		* [ROBOT_TYPE_NUMBER](#robot_type_number)
+		* [end of create_robot](#end-of-create_robot)
+	* [do_robot](#do_robot)
+	* [do_num & do_string](#do_num--do_string)
+	* [sub_func](#sub_func)
+	* [add_func (leaking glibc)](#add_func-leaking-glibc)
+* [Snippet from glibc 2.31 source sysdeps/x86_64/nptl/tls.h](#snippet-from-glibc-231-source-sysdepsx86_64nptltlsh)
+* [context.log_level = "DEBUG"](#contextlog_level--debug)
+* [r = elf.process()](#r--elfprocess)
+* [Sending 104 bytes to leak the libc](#sending-104-bytes-to-leak-the-libc)
+* [tcbhead_t.stack_guard overwrite](#tcbhead_tstack_guard-overwrite)
+* [execve("/bin/sh", NULL, NULL)](#execvebinsh-null-null)
+
+<!-- vim-markdown-toc -->
+
 ## First contact with the challenge
 
 First of all, we can take some informations on the challenge.
