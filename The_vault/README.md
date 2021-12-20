@@ -1,5 +1,13 @@
 # The vault
 
+## Summary
+
+
+* [First contact with the challenge](#first-contact-with-the-challenge)
+* [Reverse engineering](#reverse-engineering)
+* [Flag via debug or scripting](#flag-via-debug-or-scripting)
+
+
 ## First contact with the challenge
 
 Fist of all, let’s gather some information on the binary.
