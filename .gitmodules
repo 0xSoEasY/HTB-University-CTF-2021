@@ -1,0 +1,3 @@
+[submodule "The_vault/rootfs"]
+	path = The_vault/rootfs
+	url = https://github.com/qilingframework/rootfs
