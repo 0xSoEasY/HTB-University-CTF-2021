@@ -4,11 +4,7 @@ During the Qualifications for University CTF 2021, organized by [HackTheBox](htt
 
 Thanks to my mates from the [GCC team](https://twitter.com/gcc_ensibs), which is the [ENSIBS](https://www-ensibs.univ-ubs.fr) cybersecurity club's team.
 
-## Results
-
 ![GCC results](GCC_stats.png)
-
-## Write-ups
 
 |     Phase      |  Category |              Challenge               |
 |----------------|-----------|--------------------------------------|
