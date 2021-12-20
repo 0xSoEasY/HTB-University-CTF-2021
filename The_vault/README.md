@@ -5,7 +5,9 @@
 
 * [First contact with the challenge](#first-contact-with-the-challenge)
 * [Reverse engineering](#reverse-engineering)
-* [Flag via debug or scripting](#flag-via-debug-or-scripting)
+* [Flag](#flag)
+  - [Using debug](#using-debug)
+  - [Using a Qiling solving script](#using-a-Qiling-solving-script)
 
 
 ## First contact with the challenge
@@ -118,7 +120,9 @@ else
 
 We can notice that even if our flag is not the correct one, the program will not break and will continue comparing all the characters of our input to the characters of the flag.
 
-## Flag via debug or scripting
+## Flag
+
+### Using debug
 
 The easiest way to flag this challenge is to set a breakpoint at the cmp instruction that will compare our input char and the real flag char (note those addresses will change at every execution because it's a PIE).
 
@@ -154,7 +158,11 @@ The easiest way to flag this challenge is to set a breakpoint at the cmp instruc
 Before, we have to make sure to have a local flag of 25 chars: we can put `HTB{AAAAAAAAAAAAAAAAAAAA}` in `flag.txt`.
 
 We will then put our breakpoint at `0xC3A1: cmp eax, ecx` in gdb or IDA for example.
-At each round, the value of our input will be in `eax` and the corresponding char of the flag will be in `ecx`: we will note the `ecx` value, pass to the next char, note the `ecx` value, pass to the next char etc... Or we can automate this process with a script, using Qiling for example!
+At each round, the value of our input will be in `eax` and the corresponding char of the flag will be in `ecx`: we will note the `ecx` value, pass to the next char, note the `ecx` value, pass to the next char etc...
+
+### Using a Qiling solving script
+
+Or we can automate this process with a script, using Qiling for example!
 
 ```python
 from qiling import *
