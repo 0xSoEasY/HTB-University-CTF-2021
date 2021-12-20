@@ -1,5 +1,11 @@
 # Upgrades
 
+## Summary
+
+* [First contact with the challenge](#first-contact-with-the-challenge)
+* [Opening macros in LibreOffice](#opening-macros-in-libreoffice)
+* [Macro emulation with ViperMonkey](#macro-emulation-with-vipermonkey)
+
 ## First contact with the challenge
 
 We download the challenge and find a file named `Upgrades.pptm`. Let's take some basic information on this file: 
