@@ -24,7 +24,7 @@
 * [Sending 104 bytes to leak the libc](#sending-104-bytes-to-leak-the-libc)
 * [tcbhead_t.stack_guard overwrite](#tcbhead_tstack_guard-overwrite)
 * [execve("/bin/sh", NULL, NULL)](#execvebinsh-null-null)
-* [multiply_func (tcbhead_t overflow and ret2libc)](#multiply_func--tcbhead_t-overflow-and-ret2libc)
+* [multiply_func (tcbhead_t overflow and ret2libc)](#multiply_func-tcbhead_t-overflow-and-ret2libc)
 
 <!-- vim-markdown-toc -->
 
