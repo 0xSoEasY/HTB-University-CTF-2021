@@ -1,5 +1,18 @@
 # Arachnoid Heaven
 
+## Summary
+
+* [First contact with the challenge](#first-contact-with-the-challenge)
+* [Functions analysis](#functions-analysis)
+	* [Main](#main)
+	* [craft_arachnoid](#craft_arachnoid)
+	* [delete_arachnoid](#delete_arachnoid)
+	* [view_arachnoids](#view_arachnoids)
+	* [obtain_arachnoid](#obtain_arachnoid)
+* [Exploitation idea](#exploitation-idea)
+* [Final solving script](#final-solving-script)
+
+
 ## First contact with the challenge
 
 Fist of all, let's gather some information on the binary.
@@ -233,7 +246,7 @@ We can note 3 interesting things:
 
 This can lead to a Use after free and a double free vulnerability.
 
-### `view_arachnoids`
+### view_arachnoids
 
 This function will just print the name and code of all the arachnoids in arachnoids.
 
